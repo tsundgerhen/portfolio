@@ -8,9 +8,9 @@ interface DotsProps {
 
 export default function Dots({ x, y, p }: DotsProps) {
   // Get responsive values with fallbacks
-  const xValue = useBreakpointValue(x) ?? (typeof x === "number" ? x : 5);
-  const yValue = useBreakpointValue(y) ?? (typeof y === "number" ? y : 5);
-  const pValue = useBreakpointValue(p) ?? (typeof p === "number" ? p : 10);
+  const xValue = useBreakpointValue(typeof x === "number" ? { base: x } : x) ?? 5;
+  const yValue = useBreakpointValue(typeof y === "number" ? { base: y } : y) ?? 5;
+  const pValue = useBreakpointValue(typeof p === "number" ? { base: p } : p) ?? 10;
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">

@@ -8,7 +8,7 @@ export default function SkillCard({ skillData, count }: { skillData: Skill; coun
             display="grid"
             gridTemplateColumns={`repeat(${count}, 1fr)`} // Ensures 'count' items per row
             gap="16px"
-            width={count === 3 ? "48%" : "100%"}
+            width={count === 3 ? "40%" : "100%"}
         >
             {Object.entries(skillData).map(([category, skills]) => (
                 <Box 

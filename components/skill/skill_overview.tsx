@@ -15,11 +15,31 @@ export default function SkillOverview() {
   const { skills } = skillData;
 
   return (
-    <Box display={'flex'} flexDirection={'column'} alignItems={'start'} justifyContent={'start'} w={'100%'}>
-      <Box display={'flex'} flexDirection={'row'} alignItems={'center'} justifyContent={'space-between'} w={'100%'}>
-        <Box display='flex' flexDirection='row' justifyContent='space-between' alignItems='center' gap='20px' paddingY={'2vw'}>
+    <Box
+      display={'flex'}
+      flexDirection={'column'}
+      alignItems={'start'}
+      justifyContent={'start'}
+      w={'100%'}>
+      <Box
+        display={'flex'}
+        flexDirection={'row'}
+        alignItems={'center'}
+        justifyContent={'space-between'}
+        w={'100%'}>
+        <Box
+          display='flex'
+          flexDirection='row'
+          justifyContent='space-between'
+          alignItems='center'
+          gap='20px'
+          paddingY={'2vw'}>
           <Text fontSize={'3xl'} fontFamily={'var(--font-family)'}>
-            <chakra.span fontSize={'3xl'} fontWeight={'semi-bold'} fontFamily={'var(--font-family)'} color={'var(--primary)'}>
+            <chakra.span
+              fontSize={'3xl'}
+              fontWeight={'semi-bold'}
+              fontFamily={'var(--font-family)'}
+              color={'var(--primary)'}>
               #
             </chakra.span>
             skill
@@ -28,27 +48,52 @@ export default function SkillOverview() {
         </Box>
       </Box>
 
-      <Box display='flex' flexDirection='row' flexWrap='wrap' justifyContent='start' alignItems='start' gap='100px' w={'100%'} paddingTop={"8"}>
-        <Box h='40%' w='40%' display='flex' justifyContent='center' alignItems='center' position='relative'>
+      <Box
+        display='flex'
+        flexDirection='row'
+        flexWrap='wrap'
+        justifyContent='start'
+        alignItems='start'
+        gap='100px'
+        w={'100%'}
+        paddingTop={'8'}>
+        <Box
+          h={{ base: '60vw', md: '40vh' }} // Adjust height based on screen size
+          w={{ base: '80vw', md: '40%' }} // Make width responsive
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+          position='relative'
+          maxW='500px' // Prevent from getting too big on large screens
+          minW='250px' // Prevent from shrinking too much on small screens
+        >
           {/* Grid Layout for Background */}
           <Box position='absolute' top='-10%' left='10%'>
             <Dots x={5} y={5} p={10} />
           </Box>
 
-          <Box position='absolute' top='-30%' right='10%'>
-            <Box border='1px solid gray' w='80px' h='80px' />
+          <Box position='absolute' top='0' right='10%'>
+            <Box
+              border='1px solid gray'
+              w={{ base: '50px', md: '80px' }}
+              h={{ base: '50px', md: '80px' }}
+            />
           </Box>
 
-          <Box position='absolute' bottom='-20%' right='25%'>
+          <Box position='absolute' bottom='20%' right='25%'>
             <Dots x={5} y={5} p={10} />
           </Box>
 
-          <Box position='absolute' bottom='-100%' left='15%'>
+          <Box position='absolute' bottom='50%' left='15%'>
             <Logo size={30} />
           </Box>
 
-          <Box position='absolute' bottom='-80%' right='5%'>
-            <Box border='1px solid gray' w='40px' h='40px' />
+          <Box position='absolute'  right='5%'>
+            <Box
+              border='1px solid gray'
+              w={{ base: '30px', md: '40px' }}
+              h={{ base: '30px', md: '40px' }}
+            />
           </Box>
         </Box>
         <SkillCard skillData={skills} count={3} />
