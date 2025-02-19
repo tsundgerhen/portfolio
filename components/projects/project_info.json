@@ -7,7 +7,7 @@
       "frameworks": ["Next.js", "Chakra UI"],
       "tools": ["Figma", "Git"],
       "info": "A personal portfolio website showcasing my projects and skills.",
-      "link": "https://myportfolio.com",
+      "link": "https://portfolio-git-main-tsundgerhens-projects.vercel.app",
       "finished": true,
       "link_type": "Domain"
     },
