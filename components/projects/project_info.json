@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "name": "Personal Portfolio",
+      "image_src": "/protfolio.png",
+      "languages": ["TypeScript"],
+      "frameworks": ["Next.js", "Chakra UI"],
+      "tools": ["Figma", "Git"],
+      "info": "A personal portfolio website showcasing my projects and skills.",
+      "link": "https://myportfolio.com",
+      "finished": true,
+      "link_type": "Domain"
+    },
+    {
+      "name": "FunDora Payment System",
+      "image_src": "/fundora.jpeg",
+      "languages": ["TypeScript"],
+      "frameworks": ["Next.js", "Chakra UI"],
+      "tools": ["Nats", "Websocket", "MongoDB"],
+      "info": "Global payment system.",
+      "link": "https://github.com/tsundgerhen/ms-stream-demo",
+      "finished": false,
+      "link_type": "GitHub"
+    }
+  ],
+  "small_projects": [
+    {
+      "name": "Manhwa downloader",
+      "languages": ["Python"],
+      "tools": [],
+      "info": "Manhwa downloader tools for another project.",
+      "link": "https://myportfolio.com",
+      "finished": true,
+      "link_type": "GitHub"
+    },
+    {
+      "name": "Image Upscaler",
+      "languages": ["Python"],
+      "tools": ["RealESRGAN"],
+      "info": "Image upscaler using RealESRGAN.",
+      "link": "https://github.com/tsundgerhen/comiga-upscale",
+      "finished": true,
+      "link_type": "GitHub"
+    },
+    {
+      "name": "Logo Quiz app",
+      "languages": ["Java"],
+      "tools": ["Anriod Studio"],
+      "info": "Mini Logo Quiz android application i made for school work.",
+      "link": "https://github.com/tsundgerhen/logoquiz",
+      "finished": true,
+      "link_type": "GitHub"
+    }
+  ]
+}

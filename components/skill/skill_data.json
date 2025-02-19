@@ -1,0 +1,38 @@
+{
+    "skills": {
+        "languages": [
+            "JavaScript",
+            "TypeScript",
+            "Java",
+            "C++",
+            "Python"
+        ],
+        "frameworks": [
+            "React",
+            "Next.js",
+            "Express"
+        ],
+        "ui_libraries": [
+            "Chakra UI",
+            "NextUI (Hero UI)",
+            "Tailwind CSS"
+        ],
+        "databases": [
+            "MySQL",
+            "MongoDB",
+            "Firebase"
+        ],
+        "tools": [
+            "Git",
+            "Jenkins",
+            "VS Code",
+            "Figma",
+            "NATS"
+        ],
+        "other_technologies": [
+            "HTML",
+            "CSS",
+            "WebSocket"
+        ]
+    }
+}

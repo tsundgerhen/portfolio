@@ -1,21 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --background: #282C33;
+  --primary: #C778DD;
+  --gray: #ABB2BF;
+  --foreground: var(--white);
+  --font-family: "Fira Code", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --white: #ffffff;
+    --background: #282C33;
+    --primary: #C778DD;
+    --gray: #ABB2BF;
+    --foreground: var(--white);
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  font-family: var(--font-family);
 }
