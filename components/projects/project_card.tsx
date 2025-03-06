@@ -14,7 +14,7 @@ export default function ProjectCard({ projectInfo, small_project }: ProjectCardP
   const router = useRouter();
 
   return (
-    <Box display={'block'} boxDirection={'column'} border={'1px solid var(--gray)'} w={'25vw'}>
+    <Box display={'block'} boxDirection={'column'} border={'1px solid var(--gray)'} w={{base:"90%", md:'25vw'}}>
       {/* Image Section */}
       {projectInfo.image_src && <img src={projectInfo.image_src} alt={projectInfo.name} />}
 

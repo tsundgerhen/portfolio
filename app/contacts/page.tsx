@@ -3,7 +3,7 @@ import { Box, Text, chakra } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import { LuMails } from 'react-icons/lu';
 import { FaFacebook, FaInstagram, FaDiscord } from 'react-icons/fa';
-import { FaThreads } from "react-icons/fa6";
+import { FaThreads } from 'react-icons/fa6';
 import '@/app/globals.css';
 
 import Navbar from '@/components/global/navbar';
@@ -20,7 +20,7 @@ export default function Contacts() {
   const { skills } = SkillData;
   return (
     <div>
-      <Box display='flex' flexDirection='row' width={'100%'} bg='#282C33' paddingBottom={'12'}>
+      <Box display='flex' flexDirection='row' width={'100%'} bg='#282C33' minH={"85vh"}>
         {/* Media Bar */}
         <Box paddingLeft='3%'>
           <MediaBar />
@@ -45,7 +45,7 @@ export default function Contacts() {
             justifyItems={'start'}
             fontFamily={'var(--mono-font)'}
             paddingTop={'6'}
-            marginBottom={'12'}>
+            marginBottom={{ base: '5', md: '12' }}>
             <Text fontSize={'2xl'} fontWeight={'bold'}>
               <chakra.span color={'var(--primary)'}>/</chakra.span>contacts
             </Text>
@@ -55,15 +55,15 @@ export default function Contacts() {
           </Box>
           <Box
             display='flex'
-            flexDir='row'
+            flexDir={{ base: 'column', md: 'row' }}
             alignItems='start'
             justifyContent='space-between'
             gap='6'
             w='100%'
             fontFamily='var(--mono-family)'
             color='var(--gray)'
-            marginBottom={"12"}>
-            <Text maxW={'40vw'}>
+            marginBottom={{ base: '5', md: '12' }}>
+            <Text maxW={{ base: '100%', md: '40vw' }}>
               I am eager to pursue my first internship opportunity. However, if you have any other
               requests or questions, please don’t hesitate to reach out.
             </Text>
@@ -125,7 +125,7 @@ export default function Contacts() {
               gap='20px'
               paddingY={'2vw'}
               w={'100%'}>
-              <Text fontSize={'3xl'} fontFamily={'var(--font-family)'}>
+              <Text fontSize={{ base: '2xl', md: '3xl' }} fontFamily={'var(--font-family)'}>
                 <chakra.span
                   fontSize={'3xl'}
                   fontWeight={'semi-bold'}
@@ -136,80 +136,85 @@ export default function Contacts() {
                 all-media
               </Text>
             </Box>
-            <Box display={'flex'}
-            flexDirection={'row'}
-            alignItems={'center'}
-            justifyContent={'start'}
-            w={'100%'}
-            gapX={"6"}
-            marginBottom={"7vw"}>
+            <Box
+              display={'flex'}
+              flexDirection={{base:"column", md:'row'}}
+              alignItems={'start'}
+              justifyContent={'start'}
+              w={'100%'}
+              gapY={'2'}
+              gapX={'6'}
+              marginBottom={'7vw'}>
+              <Box display={'flex'} flexDirection={'row'} gapX={'6'}>
                 <Box
-                display={'flex'}
-                alignItems={'center'}
-                onClick={() => {
-                  window.open('https://www.facebook.com/Tsundgerhen', '_blank');
-                }}
-                _hover={{
-                  color: 'white',
-                  transform: 'scale(1.1)',
-                  transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
-                }}
-                aria-label='GitHub Profile'
-                cursor='pointer' // Adds a pointer cursor for clickability
-              >
-                <FaFacebook size='20px' /> <Text marginStart={'12px'}>Tsundgerhen</Text>
+                  display={'flex'}
+                  alignItems={'center'}
+                  onClick={() => {
+                    window.open('https://www.facebook.com/Tsundgerhen', '_blank');
+                  }}
+                  _hover={{
+                    color: 'white',
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
+                  }}
+                  aria-label='GitHub Profile'
+                  cursor='pointer' // Adds a pointer cursor for clickability
+                >
+                  <FaFacebook size='20px' /> <Text marginStart={'12px'}>Tsundgerhen</Text>
+                </Box>
+                <Box
+                  display={'flex'}
+                  alignItems={'center'}
+                  onClick={() => {
+                    window.open('https://www.instagram.com/tsundgerhenkiun/', '_blank');
+                  }}
+                  _hover={{
+                    color: 'white',
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
+                  }}
+                  aria-label='GitHub Profile'
+                  cursor='pointer' // Adds a pointer cursor for clickability
+                >
+                  <FaInstagram size='20px' /> <Text marginStart={'12px'}>Tsundgerhen</Text>
+                </Box>
               </Box>
-              <Box
-                display={'flex'}
-                alignItems={'center'}
-                onClick={() => {
-                  window.open('https://www.instagram.com/tsundgerhenkiun/', '_blank');
-                }}
-                _hover={{
-                  color: 'white',
-                  transform: 'scale(1.1)',
-                  transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
-                }}
-                aria-label='GitHub Profile'
-                cursor='pointer' // Adds a pointer cursor for clickability
-              >
-                <FaInstagram size='20px' /> <Text marginStart={'12px'}>Tsundgerhen</Text>
-              </Box>
-              <Box
-                display={'flex'}
-                alignItems={'center'}
-                onClick={() => {
-                  window.open('https://www.discordapp.com/users/589019628030918658', '_blank');
-                }}
-                _hover={{
-                  color: 'white',
-                  transform: 'scale(1.1)',
-                  transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
-                }}
-                aria-label='GitHub Profile'
-                cursor='pointer' // Adds a pointer cursor for clickability
-              >
-                <FaDiscord size='20px' /> <Text marginStart={'12px'}>Teru</Text>
-              </Box>
-              <Box
-                display={'flex'}
-                alignItems={'center'}
-                onClick={() => {
-                  window.open('https://www.threads.net/@tsundgerhenkiun', '_blank');
-                }}
-                _hover={{
-                  color: 'white',
-                  transform: 'scale(1.1)',
-                  transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
-                }}
-                aria-label='GitHub Profile'
-                cursor='pointer' // Adds a pointer cursor for clickability
-              >
-                <FaThreads size='20px' /> <Text marginStart={'12px'}>Tsundgerhen</Text>
+              <Box display={'flex'} flexDirection={'row'} gapX={'6'}>
+                <Box
+                  display={'flex'}
+                  alignItems={'center'}
+                  onClick={() => {
+                    window.open('https://www.discordapp.com/users/589019628030918658', '_blank');
+                  }}
+                  _hover={{
+                    color: 'white',
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
+                  }}
+                  aria-label='GitHub Profile'
+                  cursor='pointer' // Adds a pointer cursor for clickability
+                >
+                  <FaDiscord size='20px' /> <Text marginStart={'12px'}>Teru</Text>
+                </Box>
+                <Box
+                  display={'flex'}
+                  alignItems={'center'}
+                  onClick={() => {
+                    window.open('https://www.threads.net/@tsundgerhenkiun', '_blank');
+                  }}
+                  _hover={{
+                    color: 'white',
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.2s ease, color 0.2s ease', // Smooth transition
+                  }}
+                  aria-label='GitHub Profile'
+                  cursor='pointer' // Adds a pointer cursor for clickability
+                >
+                  <FaThreads size='20px' /> <Text marginStart={'12px'}>Tsundgerhen</Text>
+                </Box>
               </Box>
             </Box>
           </Box>
-
         </Box>
       </Box>
       <Footer />

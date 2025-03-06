@@ -4,7 +4,7 @@ import { LuMails } from 'react-icons/lu';
 import { FaFacebook, FaGithub } from 'react-icons/fa';
 export default function Footer() {
   return (
-    <Box display={'flex'} flexDir={'column'} alignContent={'center'} w={'100%'} paddingX={"15vw"} paddingY={"2vw"} borderTop={"1px solid var(--gray)"}>
+    <Box display={'flex'} flexDir={'column'} alignContent={'center'} w={'100%'} paddingX={"15vw"} paddingY={"2vw"} maxH={{base:"15vh", md:"15vh"}} borderTop={"1px solid var(--gray)"}>
       <Box display={'flex'} flexDir={'row'} justifyContent={'space-between'} w={'100%'}>
         <Box display={'flex'} flexDir={'column'}>
           <Text fontFamily={'var(--mono-font)'} color={'var(--white)'} fontWeight={'semibold'}>

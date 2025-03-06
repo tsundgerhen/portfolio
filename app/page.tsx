@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
     
-      <Box display="flex" flexDirection="row" width={"100%"} bg="#282C33">
+      <Box display="flex" flexDirection="row" maxW={"100%"} bg="#282C33">
         {/* Media Bar */}
         <Box paddingLeft="3%">
           <MediaBar />

@@ -6,9 +6,11 @@ export default function SkillCard({ skillData, count }: { skillData: Skill; coun
     return (
         <Box 
             display="grid"
-            gridTemplateColumns={`repeat(${count}, 1fr)`} // Ensures 'count' items per row
-            gap="16px"
-            width={count === 3 ? "40%" : "100%"}
+            gridTemplateColumns={{
+                base: `repeat(${count !== 3 ? 2 : count - 1}, 1fr)`, // If count is not 3, show 1 item on mobile
+                md: `repeat(${count}, 1fr)`,                         // MD and above: show `count` items
+              }}gap="16px"
+              width={count === 3 ? { md: '40%', base: '70%' } : '100%'}
         >
             {Object.entries(skillData).map(([category, skills]) => (
                 <Box 
@@ -16,6 +18,7 @@ export default function SkillCard({ skillData, count }: { skillData: Skill; coun
                     border="1px solid var(--gray)" 
                     padding="12px"// Ensures proper spacing
                     height="auto" // Prevents equal height enforcement
+                    fontSize={{base: 'sm', md:'md'}}
                 >
                     <Box 
                         borderBottom="1px solid var(--gray)" 

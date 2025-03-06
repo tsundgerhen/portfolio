@@ -23,7 +23,8 @@ export default function ContentBox({ projects, skills }: ContentBoxProps) {
       alignItems={'center'}
       justifyContent={'center'}
       p={{ base: '10px', md: '50px' }}
-      gapY={'5vw'}>
+      gapY={'5vw'}
+      mb={"4vh"}>
       <Overview />
       <Quote />
       <ProjectOverview projectsData={projects} />

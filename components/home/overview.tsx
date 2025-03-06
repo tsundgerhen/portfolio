@@ -5,21 +5,60 @@ import Profile from '@/public/Image.jpg';
 
 import Logo from '@/components/global/logo';
 import Dots from '../global/dots';
+
+import { useRouter } from 'next/navigation';
 export default function Overview() {
+  const router = useRouter();
+  
+    const handleClick = (route: string) => {
+      router.push(`/${route}`);
+    };
   return (
-    <Box display='flex' flexDirection='row' alignItems='space-between' justifyContent='space-between' w={'100%'} paddingLeft={'12px'}>
-      <Box display={'flex'} flexDirection={'column'} alignItems={'start'} justifyContent={'center'}>
-        <Text color='white' fontFamily='var(--font-family)' fontSize={{ base: '1.5rem', md: '1.8rem' }} fontWeight='bold' paddingBottom={'12px'}>
-          Teru is a <chakra.span color='var(--primary)'>Frontend developer</chakra.span> and <chakra.span color='var(--primary)'>Backend developer</chakra.span>
+    <Box
+      display='flex'
+      flexDirection='row'
+      alignItems='space-between'
+      justifyContent='space-between'
+      w={'100%'}
+      paddingLeft={'12px'}>
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        alignItems={'start'}
+        justifyContent={'center'}
+        maxW={'70%'}>
+        <Text
+          color='white'
+          fontFamily='var(--font-family)'
+          fontSize={{ base: '1.2rem', md: '1.8rem' }}
+          fontWeight='bold'
+          paddingBottom={'12px'}>
+          Teru is a <chakra.span color='var(--primary)'>Frontend developer</chakra.span> and{' '}
+          <chakra.span color='var(--primary)'>Backend developer</chakra.span>
         </Text>
-        <Text color='var(--gray)' fontSize={{ base: '0.5rem', md: '0.8rem' }} fontFamily='var(--font-family)' paddingBottom={'24px'}>
-          He is a developer with experience in building web applications using modern technologies. He is passionate about building scalable and maintainable applications.
+        <Text
+          color='var(--gray)'
+          fontSize={{ base: '0.7rem', md: '0.8rem' }}
+          fontFamily='var(--font-family)'
+          paddingBottom={'24px'}>
+          He is a developer with experience in building web applications using modern technologies.
+          He is passionate about building scalable and maintainable applications.
         </Text>
-        <Button bg='transparent' border='1px solid var(--primary)' color='var(--white)' _hover={{ bg: 'var(--primary)', color: 'white' }} padding={'4px'} paddingX={'18px'}>
+        <Button
+          bg='transparent'
+          border='1px solid var(--primary)'
+          color='var(--white)'
+          _hover={{ bg: 'var(--primary)', color: 'white' }}
+          p='4px'
+          px='18px'
+          fontSize={{ base: '0.5em', md:"1em"}}
+          size={{ base: "xs", md: "md"}}
+          onClick={() => handleClick("contacts")}
+        >
           Contact me
         </Button>
       </Box>
-      <Box display='flex' flexDirection='column' position='relative'>
+      <Box display={{ base: 'none', md: 'flex' }} flexDirection='column' position='relative'>
         {/* Logo positioned absolutely */}
         <Box
           position='absolute'

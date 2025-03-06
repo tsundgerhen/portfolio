@@ -34,17 +34,20 @@ export default function SkillOverview() {
           alignItems='center'
           gap='20px'
           paddingY={'2vw'}>
-          <Text fontSize={'3xl'} fontFamily={'var(--font-family)'}>
+          <Text fontSize={{ base: 'xl', md: '3xl' }} fontFamily={'var(--font-family)'}>
             <chakra.span
-              fontSize={'3xl'}
+              fontSize={{ base: 'xl', md: '3xl' }}
               fontWeight={'semi-bold'}
               fontFamily={'var(--font-family)'}
               color={'var(--primary)'}>
               #
             </chakra.span>
-            skill
+            Skill
           </Text>
-          <Box border={'1px solid var(--primary)'} marginTop={'2px'} w={'20vw'}></Box>
+          <Box
+            border={'1px solid var(--primary)'}
+            marginTop={'2px'}
+            w={{ base: '20vw', md: '35vw' }}></Box>
         </Box>
       </Box>
 
@@ -60,7 +63,7 @@ export default function SkillOverview() {
         <Box
           h={{ base: '60vw', md: '40vh' }} // Adjust height based on screen size
           w={{ base: '80vw', md: '40%' }} // Make width responsive
-          display='flex'
+          display={{base: 'none', md:'flex'}}
           justifyContent='center'
           alignItems='center'
           position='relative'

@@ -1,9 +1,12 @@
 'use client';
 import { Box, Button, Text, chakra } from '@chakra-ui/react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Dots from '../global/dots';
 export default function AboutMeOverview() {
   const router = useRouter();
+  const pathname = usePathname();
+  const currentPath = pathname;
+  const pageSegment = currentPath.split('/').pop();
   return (
     <Box
       display={'flex'}
@@ -26,7 +29,7 @@ export default function AboutMeOverview() {
           alignItems='start'
           justifyContent='start'
           gap='6'
-          maxW='35vw'
+          maxW={{base:'100%', md:'35vw'}}
           fontFamily='var(--mono-family)'
           color='var(--gray)'>
           <Text>Hello, I'm Teru! </Text>
@@ -35,7 +38,7 @@ export default function AboutMeOverview() {
             in building responsive websites from scratch and developing well-structured backend
             servers, transforming them into modern, user-friendly systems.
           </Text>
-          <Text>
+          <Text display={{base:`${pageSegment === "about-me" ? 'flex' : 'none'}`, md:"flex"} }>
             Transforming my creativity and knowledge into application systems has been my passion
             for over a year. I’ve been developing various innovative systems with my team, MS. I’m
             constantly exploring the latest technologies and frameworks to enhance my skills and
@@ -48,11 +51,12 @@ export default function AboutMeOverview() {
             _hover={{ cursor: 'pointer', bg: 'var(--primary)', color: 'white' }}
             padding={'4px'}
             paddingX={'18px'}
-            onClick={() => router.push('/about-me')}>
+            onClick={() => router.push('/about-me')}
+            display={`${pageSegment === "about-me" ? 'none' :'flex'}`}>
             Read more {`~~>`}
           </Button>
         </Box>
-        <Box display='flex' flexDirection='column' position='relative'>
+        <Box display={{base: "none", md:'flex'}} flexDirection='column' position='relative'>
           {/* Logo positioned absolutely */}
           <Box
             position='absolute'

@@ -40,14 +40,14 @@ export default function Contacts() {
       </Box>
       <Box
         display='flex'
-        flexDir='row'
+        flexDir={{base:'column', md:'row'}}
         alignItems='start'
         justifyContent='space-between'
         gap='6'
         w='100%'
         fontFamily='var(--mono-family)'
         color='var(--gray)'>
-        <Text maxW={'40vw'}>
+        <Text maxW={{base:'100%', md:'40vw'}}>
           I am eager to pursue my first internship opportunity. However, if you have any other
           requests or questions, please don’t hesitate to reach out.
         </Text>
