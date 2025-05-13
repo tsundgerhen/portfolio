@@ -13,8 +13,8 @@ export interface Project {
 export interface Skill {
   languages: string[];
   frameworks: string[];
-  ui_libraries: string[];
+  uiLibraries: string[];
   databases: string[];
   tools: string[];
-  other_technologies: string[];
+  aiModels: string[];
 }
