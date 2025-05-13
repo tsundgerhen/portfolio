@@ -19,9 +19,7 @@ export default function AboutMeOverview() {
         flexDirection={'row'}
         alignItems={'start'}
         justifyContent={'space-between'}
-        w={'100%'}>
-       
-      </Box>
+        w={'100%'}></Box>
       <Box display='flex' justifyContent='space-between' w='100%'>
         <Box
           display='flex'
@@ -29,16 +27,19 @@ export default function AboutMeOverview() {
           alignItems='start'
           justifyContent='start'
           gap='6'
-          maxW={{base:'100%', md:'35vw'}}
+          maxW={{ base: '100%', md: '35vw' }}
           fontFamily='var(--mono-family)'
           color='var(--gray)'>
           <Text>Hello, I'm Teru! </Text>
           <Text>
-            I’m a frontend and backend developer from Mongolia and a student at MUST. I specialize
-            in building responsive websites from scratch and developing well-structured backend
-            servers, transforming them into modern, user-friendly systems.
+            I’m a frontend and backend developer, currently studying at MUST. I enjoy
+            building clean, responsive websites from the ground up and crafting solid backend
+            systems that are reliable and easy to work with. Lately, I’ve also been diving into
+            computer vision — working on AI-powered tools like person tracking from CCTV footage,
+            license plate detection, and more. I love combining practical coding with smart AI
+            models to build systems that actually solve real-world problems.
           </Text>
-          <Text display={{base:`${pageSegment === "about-me" ? 'flex' : 'none'}`, md:"flex"} }>
+          <Text display={{ base: `${pageSegment === 'about-me' ? 'flex' : 'none'}`, md: 'flex' }}>
             Transforming my creativity and knowledge into application systems has been my passion
             for over a year. I’ve been developing various innovative systems with my team, MS. I’m
             constantly exploring the latest technologies and frameworks to enhance my skills and
@@ -52,11 +53,11 @@ export default function AboutMeOverview() {
             padding={'4px'}
             paddingX={'18px'}
             onClick={() => router.push('/about-me')}
-            display={`${pageSegment === "about-me" ? 'none' :'flex'}`}>
+            display={`${pageSegment === 'about-me' ? 'none' : 'flex'}`}>
             Read more {`~~>`}
           </Button>
         </Box>
-        <Box display={{base: "none", md:'flex'}} flexDirection='column' position='relative'>
+        <Box display={{ base: 'none', md: 'flex' }} flexDirection='column' position='relative'>
           {/* Logo positioned absolutely */}
           <Box
             position='absolute'

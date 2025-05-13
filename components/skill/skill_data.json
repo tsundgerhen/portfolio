@@ -1,38 +1,42 @@
 {
-    "skills": {
-        "languages": [
-            "JavaScript",
-            "TypeScript",
-            "Java",
-            "C++",
-            "Python"
-        ],
-        "frameworks": [
-            "React",
-            "Next.js",
-            "Express"
-        ],
-        "ui_libraries": [
-            "Chakra UI",
-            "NextUI (Hero UI)",
-            "Tailwind CSS"
-        ],
-        "databases": [
-            "MySQL",
-            "MongoDB",
-            "Firebase"
-        ],
-        "tools": [
-            "Git",
-            "Jenkins",
-            "VS Code",
-            "Figma",
-            "NATS"
-        ],
-        "other_technologies": [
-            "HTML",
-            "CSS",
-            "WebSocket"
-        ]
-    }
+  "skills": {
+    "languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "C++"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Express.js"
+    ],
+    "uiLibraries": [
+      "Tailwind CSS",
+      "Chakra UI",
+      "Shadcn UI",
+      "NextUI (Hero UI)"
+    ],
+    "databases": [
+      "MongoDB",
+      "MySQL",
+      "Firebase"
+    ],
+    "tools": [
+      "Git",
+      "VS Code",
+      "Figma",
+      "Jenkins",
+      "NATS"
+    ],
+    "aiModels": [
+      "YOLOv8",
+      "YOLO-NAS",
+      "FaceNet",
+      "GaitGL",
+      "EasyOCR",
+      "PyTesseract"
+    ]
+  }
 }

@@ -1,6 +1,47 @@
 {
   "projects": [
+    
     {
+      "name": "PersonTracker",
+      "image_src": "/track.jpg",
+      "languages": ["Python"],
+      "tools": ["Yolov8n", "GaitGL", "face_recognition"],
+      "info": "A pure Python implementation that integrates AI models and libraries for person tracking using CCTV footage or videos. This system connects face recognition, gait analysis (GaitGL), and object detection (YOLOv8n) into a unified workflow—no UI or full application, just the core logic and model integration code.",
+      "link": "https://github.com/tsundgerhen/PersonTracker",
+      "finished": true,
+      "link_type": "GitHub"
+    },
+    {
+      "name": "Mongolian RLPR system",
+      "image_src": "/plate.png",
+      "languages": ["Python"],
+      "tools": ["Yolov8n", "Pytestract", "EasyOCR"],
+      "info": "YOLOv8-Based Mongolian License Plate Detection A computer vision project built from scratch using YOLOv8 to detect Mongolian license plates. Trained on the mlub-mongolian-car-plate-prediction dataset.",
+      "link": "https://github.com/tsundgerhen/mongolian_licence_plate",
+      "finished": true,
+      "link_type": "GitHub"
+    },{
+      "name": "FunDora Payment System",
+      "image_src": "/fundora.jpeg",
+      "languages": ["TypeScript"],
+      "frameworks": ["Next.js", "Chakra UI"],
+      "tools": ["Nats", "Websocket", "MongoDB"],
+      "info": "A modern donation, membership, and payment system for content creators, supporting global payment providers and cryptocurrency. In Development",
+      "link": "https://github.com/tsundgerhen/ms-stream-demoNats",
+      "finished": false,
+      "link_type": "GitHub"
+    },
+    {
+      "name": "FunDora Payment System Backend",
+      "image_src": "/fundora.jpeg",
+      "languages": ["TypeScript"],
+      "frameworks": ["Nest.js", "Prisma"],
+      "tools": ["MongoDB"],
+      "info": "A modern donation, membership, and payment system for content creators, supporting global payment providers and cryptocurrency. Backend In Development",
+      "link": "https://github.com/tsundgerhen/ms-stream-backend",
+      "finished": false,
+      "link_type": "GitHub"
+    },{
       "name": "Personal Portfolio",
       "image_src": "/protfolio.png",
       "languages": ["TypeScript"],
@@ -10,17 +51,6 @@
       "link": "https://portfolio-git-main-tsundgerhens-projects.vercel.app",
       "finished": true,
       "link_type": "Domain"
-    },
-    {
-      "name": "FunDora Payment System",
-      "image_src": "/fundora.jpeg",
-      "languages": ["TypeScript"],
-      "frameworks": ["Next.js", "Chakra UI"],
-      "tools": ["Nats", "Websocket", "MongoDB"],
-      "info": "Global payment system.",
-      "link": "https://github.com/tsundgerhen/ms-stream-demo",
-      "finished": false,
-      "link_type": "GitHub"
     }
   ],
   "small_projects": [
